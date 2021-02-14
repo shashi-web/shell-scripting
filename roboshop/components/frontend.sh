@@ -6,7 +6,7 @@ maven "Installing nginx" "yum install nginx -y"
 stat $?
 #yum install nginx -y
 maven "starting nginx service" "systemctl start nginx"
-stat$?
+stat $?
 exit
 
 systemctl enable nginx

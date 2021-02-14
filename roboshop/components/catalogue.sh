@@ -20,7 +20,7 @@ npm install --unsafe-perm
 stat $?
 maven "Update systemd catalogue file" "sed -i -e 's/MONGO_DNSNAME/mongodb-ss.devopsproject.tk' /home/roboshop/catalogue/systemd.service && mv /home/roboshop/catalogue/systemd.service  /etc/systemd/system/catalogue.service
 "
-sed -i -e 's/MONGO_DNSNAME/mongodb-ss.devopsproject.tk' /home/roboshop/catalogue/systemd.service && mv /home/roboshop/catalogue/systemd.service  /etc/systemd/system/catalogue.service
+sed -i -e 's/MONGO_DNSNAME/mongodb-ss.devopsproject.tk/' /home/roboshop/catalogue/systemd.service && mv /home/roboshop/catalogue/systemd.service  /etc/systemd/system/catalogue.service
 stat $?
 maven "start catalogue service" "systemctl daemon-reload && systemctl restart catalogue && systemctl enable catalogue "
 systemctl daemon-reload && systemctl restart catalogue && systemctl enable catalogue

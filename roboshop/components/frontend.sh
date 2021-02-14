@@ -2,9 +2,9 @@
 COMPONENT=frontend
 source components/common.sh
 
-linux "Installing nginx"
+maven "Installing nginx""yum install nginx -y"
 #yum install nginx -y
-linux "starting nginx service"
+linux "starting nginx service""systemctl start nginx"
 exit
 systemctl enable nginx
 systemctl start nginx

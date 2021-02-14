@@ -1,6 +1,11 @@
 #!/bin/bash
+COMPONENT=frontend
+source common.sh
 
-yum install nginx -y
+linux "Installing nginx"
+#yum install nginx -y
+linux "starting nginx service"
+exit
 systemctl enable nginx
 systemctl start nginx
 

@@ -3,9 +3,12 @@ COMPONENT=frontend
 source components/common.sh
 
 maven "Installing nginx" "yum install nginx -y"
+stat $?
 #yum install nginx -y
 maven "starting nginx service" "systemctl start nginx"
+stat$?
 exit
+
 systemctl enable nginx
 systemctl start nginx
 

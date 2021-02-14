@@ -17,6 +17,14 @@ fi
 maven(){
   echo -e "[\e[34mINFO\e[0m]------------------<$1>-----------------"
   echo -e "[\e[34mINFO\e[0m] \e[1m $2 \e[0m"
-  echo -e "[\e[34mINFO\e[0m]---------------------------------------"
-  echo -e "[\e[34mINFO\e[0m]------ \e[31mSUCCESS\e[0m--------------"
+
+}
+
+stat(){
+  if [ "$1" -eq 0 ]; then
+    echo -e "[\e[34mINFO\e[0m]\e[31mSUCCESS\e[0m"
+  else
+    echo -e "[\e[34mINFO\e[0m]\e[31mFAILURE\e[0m"
+  fi
+
 }

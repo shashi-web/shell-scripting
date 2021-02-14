@@ -29,4 +29,4 @@ stat $?
 
 maven "Load schema" " "
 cd /tmp && unzip -o mongodb.zip && mongo < catalogue.js && mongo < users.js
-stat$?
+stat $?

@@ -28,8 +28,5 @@ curl -s -L -o /tmp/mongodb.zip "https://dev.azure.com/DevOps-Batches/f635c088-10
 stat $?
 
 maven "Load schema" " "
-cd /tmp
-unzip -o mongodb.zip
-mongo < catalogue.js
-mongo < users.js
+cd /tmp && unzip -o mongodb.zip && mongo < catalogue.js && mongo < users.js
 stat$?

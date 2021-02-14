@@ -27,3 +27,4 @@ mv localhost.conf /etc/nginx/default.d/roboshop.conf
 stat $?
 maven "restart nginx" "systemctl restart nginx"
 systemctl restart nginx
+stat $?

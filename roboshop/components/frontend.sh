@@ -1,6 +1,6 @@
 #!/bin/bash
 COMPONENT=frontend
-source common.sh
+source component/common.sh
 
 linux "Installing nginx"
 #yum install nginx -y

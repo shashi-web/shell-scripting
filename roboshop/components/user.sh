@@ -19,7 +19,7 @@ npm install --unsafe-perm
 stat $?
 chown roboshop:roboshop /home/roboshop -R
 maven "Update systemd cart file" "sed -i -e 's/MONGO_DNSNAME/mongodb-ss.devopsproject.tk' /home/roboshop/catalogue/systemd.service && mv /home/roboshop/catalogue/systemd.service  /etc/systemd/system/catalogue.service"
-sed -i -e 's/MONGO_DNSNAME/mongodb-ss.devopsproject.tk/' -e 's/REDIS_ENDPOINT/redis-ss.devopsproject.tk/' /home/roboshop/user/systemd.service && mv /home/roboshop/user/systemd.service  /etc/systemd/system/user.service
+sed -i -e 's/MONGO_ENDPOINT/mongodb-ss.devopsproject.tk/' -e 's/REDIS_ENDPOINT/redis-ss.devopsproject.tk/' /home/roboshop/user/systemd.service && mv /home/roboshop/user/systemd.service  /etc/systemd/system/user.service
 stat $?
 maven "start user service" "systemctl daemon-reload && systemctl restart user && systemctl enable user "
 systemctl daemon-reload && systemctl restart user && systemctl enable user

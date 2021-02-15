@@ -17,8 +17,9 @@ stat $?
 maven "Install nodejs dependences" "npm install"
 npm install --unsafe-perm
 stat $?
+chown roboshop:roboshop /home/roboshop -R
 maven "Update systemd cart file" "sed -i -e 's/MONGO_DNSNAME/mongodb-ss.devopsproject.tk' /home/roboshop/catalogue/systemd.service && mv /home/roboshop/catalogue/systemd.service  /etc/systemd/system/catalogue.service"
-sed -i -e 's/MONGO_DNSNAME/mongodb-ss.devopsproject.tk/' /home/roboshop/catalogue/systemd.service && mv /home/roboshop/catalogue/systemd.service  /etc/systemd/system/catalogue.service
+sed -i -e 's/REDIS_ENDPOINT/redis-ss.devopsb54.tk/' -e 's/CATALOGUE_ENDPOINT/catalogue-ss.devopsproject.tk/' /home/roboshop/cart/systemd.service && mv /home/roboshop/cart/systemd.service /etc/systemd/system/cart.service
 stat $?
 maven "start cart service" "systemctl daemon-reload && systemctl restart cart && systemctl enable cart "
 systemctl daemon-reload && systemctl restart cart && systemctl enable cart

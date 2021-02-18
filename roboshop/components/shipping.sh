@@ -23,7 +23,7 @@ mvn clean package && mv target/shipping-1.0.jar shipping.jar
 stat $?
 
 maven "update systemd script file" ""
-sed -i -e "s/CARTENDPOINT/cart-ss.devopsproject.tk" -e "s/DBHOST/mysql-ss.devopsproject.tk"
+sed -i -e "s/CARTENDPOINT/cart-ss.devopsproject.tk/" -e "s/DBHOST/mysql-ss.devopsproject.tk/"
 stat $?
 
 maven "start shipping service" "mv /home/roboshop/shipping/systemd.service /etc/systemd/system/shipping.service && systemctl daemon-reload && systemctl enable shipping && systemctl start shipping"

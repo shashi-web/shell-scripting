@@ -33,3 +33,6 @@ shipping:			## Install shipping Component
 rabbitmq: common
 rabbitmq:			## Install rabbitmq Component
 	@sh components/rabbitmq.sh
+payment: common
+payment:			## Install payment Component
+	@sh components/payment.sh

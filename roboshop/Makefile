@@ -24,3 +24,6 @@ redis:			## Install redis Component
 user: common
 user:			## Install user Component
 	@sh components/user.sh
+mysql: common
+mysql:			## Install mysql Component
+	@sh components/mysql.sh

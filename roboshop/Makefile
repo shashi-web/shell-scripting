@@ -30,3 +30,6 @@ mysql:			## Install mysql Component
 shipping: common
 shipping:			## Install shipping Component
 	@sh components/shipping.sh
+rabbitmq: common
+rabbitmq:			## Install rabbitmq Component
+	@sh components/rabbitmq.sh

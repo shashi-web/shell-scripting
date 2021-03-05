@@ -11,6 +11,7 @@ read_line()
                 then
                         # WRITE LINE TO LOGFILE
                         echo $line >> /root/logPaths
+                        echo "line to logfile"
                 fi
         fi
 }
@@ -23,6 +24,7 @@ read_file()
         do
                 # CALL READ LINE FUNCTION FOR EACH LINE
                 read_line $line
+                echo "read line function"
         done < $1
 }
 

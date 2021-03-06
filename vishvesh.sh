@@ -6,12 +6,6 @@
 read_line()
 {
         # CHECK IF IT HAS THIS STRING
-        if grep -q siteActive=true "$vishvesh"; then
-           echo $? # SomeString was found
-        fi
-
-
-
         if [[ $line == *siteActive=true* ]]
         then
                 # CHECK IF THE LINE STARTS WITH THEGIVEN STRING
@@ -35,6 +29,8 @@ read_file()
                 echo "read line function"
         done < $1
 }
+read_line
+read_file
 
 echo "Name of the user: $1"
 

@@ -3,7 +3,7 @@
 read_line() {
   FILE=/Users/shashidharrao/Desktop/vishvesh/
   # CHECK IF IT HAS THIS STRING
-  if grep -q siteActive=false "$FILE"; then
+  if grep -q siteActive=true "$FILE"; then
   echo "found" # SomeString was found
   else
     echo "not found"

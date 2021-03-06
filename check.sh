@@ -7,3 +7,5 @@ read_line() {
   Stat $? # SomeString was found
   fi
 }
+read_line
+

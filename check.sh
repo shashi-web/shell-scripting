@@ -6,7 +6,7 @@ read_line() {
   if grep -q siteActive=false "$FILE"; then
   echo "found" # SomeString was found
   else
-    echo"not found"
+    echo "not found"
   fi
 }
 read_line

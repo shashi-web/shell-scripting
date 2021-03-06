@@ -6,7 +6,9 @@
 read_line()
 {
         # CHECK IF IT HAS THIS STRING
-        if [[ $line == *siteActive=true* ]]
+        FILE=/Users/shashidharrao/Desktop/vishvesh/check.txt
+  # CHECK IF IT HAS THIS STRING
+        if grep -q siteActive=true "$FILE"; then
         then
                 # CHECK IF THE LINE STARTS WITH THEGIVEN STRING
                 if [[ $(echo $line | cut -d'=' -f1) == "logPath" ]]

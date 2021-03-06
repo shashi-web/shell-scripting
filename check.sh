@@ -4,7 +4,7 @@ read_line() {
   # shellcheck disable=SC2125
   FILE=/Users/shashidharrao/Desktop/vishvesh
   # CHECK IF IT HAS THIS STRING
-  if grep -R siteActive=true "$FILE"; then
+  if grep -q siteActive=true "$FILE"; then
   echo "found" # SomeString was found
   else
     echo "not found"
